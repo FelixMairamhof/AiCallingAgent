@@ -1,0 +1,19 @@
+# Python bytecode files
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# .env file with sensitive data
+.env
+
+# Twilio recordings folder
+recordings/
+
+# IDE/editor configurations (example for VSCode)
+.vscode/
+
+# Other possible temp files
+*.log
+*.sqlite3
