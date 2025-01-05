@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app1.services.twillio_client import initiate_call
+from app.services.twillio_client import initiate_call
 import logging
 from dotenv import load_dotenv
 import os
@@ -22,6 +22,6 @@ async def create_task(task: TaskRequest):
     print("Task Created")
     print(f"Hosted on {domain}")
     logging.info(f"Task created: {task.task_description}")
-    call_sid = initiate_call(task.phone_number, domain)
+    call_sid = initiate_call(task.phone_number, "f8fc-2a02-8388-c001-e080-44c9-3a30-fe66-2983.ngrok-free.app") #should be domain from .env
     print("task and call created")
     return {"status": "Call initiated", "call_sid": call_sid}

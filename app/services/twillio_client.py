@@ -21,10 +21,9 @@ def initiate_call(phone_number, domain):
         from_=twilio_number,
         twiml=f"""
         <Response>
-            <Start>
+            <Connect>
                 <Stream url="wss://{domain}/api/voice/stream" />
-            </Start>
-            <Pause length="60" /> <!-- Keeps the call alive for 60 seconds of silence -->
+            </Connect>
         </Response>
         """,
         status_callback=f"https://{domain}/api/status-callback",

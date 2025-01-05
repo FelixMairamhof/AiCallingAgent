@@ -5,3 +5,6 @@ openai
 pyttsx3
 python-dotenv
 pydantic
+websockets
+python-multipart
+asyncio

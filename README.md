@@ -48,7 +48,7 @@ project_root/
 
 2. **Run Locally**:
    ```bash
-   uvicorn app1.main:app1 --reload
+   uvicorn app.main:app --reload --log-level debug
    ```
 
 3. **Expose to the Internet** (for Twilio webhook):
